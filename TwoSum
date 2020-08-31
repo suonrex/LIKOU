@@ -1,0 +1,11 @@
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        d = {}
+        for cnt, num in enumerate(nums):
+            num_o = target - num
+            if num_o not in d:
+                d[num] = cnt
+            else:
+                return [d[num_o], cnt]
+            
+    
